@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>eve-NG实验室 初学总结 | Stone's Blog</title><meta name="author" content="Stone"><meta name="copyright" content="Stone"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="无标题许多朋友因为主机是家用主机，网卡是R8168，导致在安装时显示No Network Adapters，这里我在网上收集到一个已经注入完毕Realtek 8168网卡驱动的ISO版本，有需要的可以直接下载。资源来自网络，侵删。 附件1 考核任务一：安装部署超融合平台要求：  使用ventoy在指定服务器上安装ESXI系统并正确设置ip地址  Esxi用户及密码：root&#x2F;Networ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="eve-NG实验室 初学总结">
+<meta property="og:url" content="https://noobspace.cn/2025/01/20/eveNG/index.html">
+<meta property="og:site_name" content="Stone&#39;s Blog">
+<meta property="og:description" content="无标题许多朋友因为主机是家用主机，网卡是R8168，导致在安装时显示No Network Adapters，这里我在网上收集到一个已经注入完毕Realtek 8168网卡驱动的ISO版本，有需要的可以直接下载。资源来自网络，侵删。 附件1 考核任务一：安装部署超融合平台要求：  使用ventoy在指定服务器上安装ESXI系统并正确设置ip地址  Esxi用户及密码：root&#x2F;Networ">
+<meta property="og:locale">
+<meta property="og:image" content="https://noobspace.cn/img/head.jpg">
+<meta property="article:published_time" content="2025-01-20T13:29:21.692Z">
+<meta property="article:modified_time" content="2025-02-10T12:30:43.610Z">
+<meta property="article:author" content="Stone">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://noobspace.cn/img/head.jpg"><link rel="shortcut icon" href="/img/SkyLine.jpg"><link rel="canonical" href="https://noobspace.cn/2025/01/20/eveNG/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'eve-NG实验室 初学总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-02-10 20:30:43'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><script>if(document.location.href == "https://lagov.top") window.location.replace("about:blank"); </script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?2b421160be50ed43c7c0cc7da9895c04";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/CQ.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Stone's Blog"><span class="site-name">Stone's Blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">eve-NG实验室 初学总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-20T13:29:21.692Z" title="发表于 2025-01-20 21:29:21">2025-01-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-10T12:30:43.610Z" title="更新于 2025-02-10 20:30:43">2025-02-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span id="" data-flag-title="eve-NG实验室 初学总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="无标题"><a href="#无标题" class="headerlink" title="无标题"></a>无标题</h1><p>许多朋友因为主机是家用主机，网卡是R8168，导致在安装时显示No Network Adapters，这里我在网上收集到一个已经注入完毕Realtek 8168网卡驱动的ISO版本，有需要的可以直接下载。资源来自网络，侵删。</p>
+<p><a target="_blank" rel="noopener" href="https://www.notion.so/img/ESXi-6.5.0-r8168-update02.iso">附件1</a></p>
+<h1 id="考核任务一：安装部署超融合平台"><a href="#考核任务一：安装部署超融合平台" class="headerlink" title="考核任务一：安装部署超融合平台"></a>考核任务一：安装部署超融合平台</h1><p>要求：</p>
+<ol>
+<li>使用ventoy在指定服务器上安装ESXI系统并正确设置ip地址</li>
+</ol>
+<p><em>Esxi用户及密码：root&#x2F;Network123!@#,.&#x2F;</em></p>
+<ol>
+<li>在安装后的ESXI系统上部署EVE-NG</li>
+</ol>
+<p><em>EVE-NG密码：root&#x2F;eve</em></p>
+<ol>
+<li>安装完成后使用openvpn拨入内网访问esxi并完成考核任务二</li>
+</ol>
+<h1 id="考核任务二：Nat地址转换和常用服务配置"><a href="#考核任务二：Nat地址转换和常用服务配置" class="headerlink" title="考核任务二：Nat地址转换和常用服务配置"></a>考核任务二：Nat地址转换和常用服务配置</h1><p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1729917721894-8400520b-9431-4920-a6ce-e9328f3ac449.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1729917721894-8400520b-9431-4920-a6ce-e9328f3ac449.png"></p>
+<p>要求：</p>
+<ol>
+<li>VPC6为Ubuntu 20.04 ltsc server系统，VPC7为Windows server2019系统</li>
+<li>根据图示正确配置IP地址</li>
+<li>配置Nat转换使inside区域的VPC6、VPC7能够访问Outside区域的任意一台主机</li>
+<li>在VPC6上面安装Web服务（Nginx），并使用Nat地址转换为R2路由器的出口IP 80端口，使Outside区域的主机能够访问该网站服务</li>
+<li>在VPC7 上开启ssh服务，并设置ssh登录方式为仅允许密钥登陆，开启root登录，并将ssh端口修改为2023</li>
+<li>在VPC7 上同时开启ssh和Windows远程桌面，并使用Nat地址转换为R2路由器的出口IP 22和3389端口，使Outside区域的主机能够通过这两个端口登录VPC7服务器</li>
+</ol>
+<p>可能遇到的问题：</p>
+<ol>
+<li>拓扑图中的虚拟机不能联网—解决方法：在esxi中开启网卡混杂模式</li>
+</ol>
+<p>注意事项：</p>
+<ol>
+<li>EVE-NG<strong>不能使用</strong>懒人包汉化版本，但可以自己尝试修改汉化</li>
+<li>Ubuntu和Windows系统<strong>不能使用</strong>从论坛下载的懒人包版本导入，必须从ISO开始安装</li>
+<li>完成过程中可使用markdown编辑器记录过程和笔记，个人推荐使用<a target="_blank" rel="noopener" href="https://joplinapp.org/">joplin</a>（支持中文）</li>
+</ol>
+<p>参考资料：</p>
+<p>EVE-NG中文论坛：<a target="_blank" rel="noopener" href="https://www.emulatedlab.com/portal.php">https://www.emulatedlab.com/portal.php</a></p>
+<p>鸟哥的Linux私房菜：<a target="_blank" rel="noopener" href="http://tiramisutes.github.io/images/PDF/vbird-linux-basic-4e.pdf">http://tiramisutes.github.io/images/PDF/vbird-linux-basic-4e.pdf</a></p>
+<p>EVE-NG创建自定义linux镜像：</p>
+<p><a target="_blank" rel="noopener" href="https://www.eve-ng.net/index.php/documentation/howtos/howto-create-own-linux-host-image/">https://www.eve-ng.net/index.php/documentation/howtos/howto-create-own-linux-host-image/</a></p>
+<p>EVE-NG创建自定义windows镜像：</p>
+<p><a target="_blank" rel="noopener" href="https://www.eve-ng.net/index.php/documentation/howtos/howto-create-own-windows-server-on-the-eve/">https://www.eve-ng.net/index.php/documentation/howtos/howto-create-own-windows-server-on-the-eve/</a></p>
+<p>考核一完成步骤：</p>
+<ol>
+<li>安装ESXI8.0系统</li>
+</ol>
+<p>由于没设备用ventoy来制作U盘系统盘安装,所以使用VMware虚拟机安装</p>
+<p>在读秒阶段，快速按下shift+o,调出命令行，输入autopartitionOSDataSize&#x3D;20480,修改ESXI的默认空间大小，以便留下更多空间安装系统</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083798786-3685450a-f0e5-4f1c-ab3c-033ca4f94f0b.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083798786-3685450a-f0e5-4f1c-ab3c-033ca4f94f0b.png"></p>
+<p>设置root密码为Network123!@#,.&#x2F;</p>
+<p>后面默认安装即可</p>
+<p>浏览器访问ip打开ESXI面板</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083798938-08fe850f-64f3-4293-9a40-fc8fee77fb66.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083798938-08fe850f-64f3-4293-9a40-fc8fee77fb66.png"></p>
+<p>把网卡设置为混杂模式，以便拓补图虚拟机正常上网</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799124-7e30aba6-95fc-4048-b5ac-ec482d53a046.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799124-7e30aba6-95fc-4048-b5ac-ec482d53a046.png"></p>
+<ol>
+<li>部署eve-ng系统</li>
+</ol>
+<p>右键ESXI系统的虚拟机-&gt;创建&#x2F;注册虚拟机-&gt;从OVF或OVA文件部署虚拟机-&gt;上传ovf文件和vmdk文件,取个名称-&gt;默认安装即可</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799324-d54286c0-7d2c-4c10-92e0-fc5d38bf5711.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799324-d54286c0-7d2c-4c10-92e0-fc5d38bf5711.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799480-d35abbd0-c1d1-4cab-88e9-07d7d44d4705.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799480-d35abbd0-c1d1-4cab-88e9-07d7d44d4705.png"></p>
+<p>设置密码</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799618-064b4ba3-f341-474d-95f3-4170b55a055e.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799618-064b4ba3-f341-474d-95f3-4170b55a055e.png"></p>
+<ol>
+<li>在eve系统用iso安装ubuntu和winserver系统</li>
+</ol>
+<p>1.进入目标文件夹</p>
+<p>cd &#x2F;opt&#x2F;unetlab&#x2F;addons&#x2F;qemu&#x2F;</p>
+<ol>
+<li>创建对应的镜像目录</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799790-a3f3d4f3-6fe4-448d-b922-87ae8cfde55e.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799790-a3f3d4f3-6fe4-448d-b922-87ae8cfde55e.png"></p>
+<ol>
+<li>上传iso文件到对应文件夹,并改名为cdrom.iso,并创建虚拟磁盘(winserver同理)</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799959-fbb3fbd1-ceb4-49c1-b31c-6d895a878ee3.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083799959-fbb3fbd1-ceb4-49c1-b31c-6d895a878ee3.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800166-960fddee-4800-4366-8829-e2692d6c29bc.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800166-960fddee-4800-4366-8829-e2692d6c29bc.png"></p>
+<p>注意:winserver2019安装的时候没有盘符，需要加载驱动程序如下图选择即可</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800356-e679becd-0348-4327-a179-b392ee7e02c3.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800356-e679becd-0348-4327-a179-b392ee7e02c3.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800541-704d2c89-3747-4dd9-a4de-a2e27a6f01bf.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800541-704d2c89-3747-4dd9-a4de-a2e27a6f01bf.png"></p>
+<p>验证：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800726-f5701795-7f01-479b-8702-2ded37268b6f.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800726-f5701795-7f01-479b-8702-2ded37268b6f.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800871-fad58b43-4d49-4ca7-b96f-a9657a77846f.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083800871-fad58b43-4d49-4ca7-b96f-a9657a77846f.png"></p>
+<ol>
+<li>访问eve系统的拓补图，并添加node，安装系统</li>
+</ol>
+<p>1.用浏览器通过IP访问,默认用户admin,默认密码eve</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801050-9dc63991-a624-4fd2-8787-e50aea61ce74.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801050-9dc63991-a624-4fd2-8787-e50aea61ce74.png"></p>
+<p>2.ubuntu安装Nginx服务.winserver安装ssh服务并按要求配置，开启3389远程桌面连接服务</p>
+<p>拓补图内连接网络：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801245-7e7614f5-8d24-428a-b930-f5782e7c4c70.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801245-7e7614f5-8d24-428a-b930-f5782e7c4c70.png"></p>
+<p>Ubuntu：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801415-ee0e62eb-a1c8-4972-ad6e-a5680f009ca9.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801415-ee0e62eb-a1c8-4972-ad6e-a5680f009ca9.png"></p>
+<p>验证：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801676-a61d8d6c-017d-48e8-baab-ad104c8e92ec.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801676-a61d8d6c-017d-48e8-baab-ad104c8e92ec.png"></p>
+<p>Winserver2019:</p>
+<p>安装ssh服务端</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801895-98039248-842d-480b-9115-5e5cab0cda67.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083801895-98039248-842d-480b-9115-5e5cab0cda67.png"></p>
+<p>按要求修改配置文件：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802041-ccc5a8c7-b50e-4a22-8f86-d055b0859970.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802041-ccc5a8c7-b50e-4a22-8f86-d055b0859970.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802211-fb5c3307-eee4-4294-b0e7-81713c02b2b3.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802211-fb5c3307-eee4-4294-b0e7-81713c02b2b3.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802358-61f13934-6951-46d3-b667-c2acd8a3c5f7.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802358-61f13934-6951-46d3-b667-c2acd8a3c5f7.png"></p>
+<p>重启服务，使配置生效</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802559-4fa2b400-ac24-4a3d-8116-7a6307e98848.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802559-4fa2b400-ac24-4a3d-8116-7a6307e98848.png"></p>
+<p>开启3389端口远程桌面服务:</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802744-2d6f581b-7340-45c4-bb4d-8bd307435d56.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802744-2d6f581b-7340-45c4-bb4d-8bd307435d56.png"></p>
+<p>验证：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802894-c117e604-0435-4d62-90df-66869efcf8a8.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083802894-c117e604-0435-4d62-90df-66869efcf8a8.png"></p>
+<p>3.创建拓补图，并按要求配置</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803061-f5f5ca77-8988-4c11-979e-66f312b3fb79.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803061-f5f5ca77-8988-4c11-979e-66f312b3fb79.png"></p>
+<p>配置ip:</p>
+<p>VPC4:</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803236-cad1cd83-6978-4d40-a5c7-76deb89ca539.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803236-cad1cd83-6978-4d40-a5c7-76deb89ca539.png"></p>
+<p>VPC5:</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803378-ed8946b9-91fc-4e21-b02c-99f185b82aff.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803378-ed8946b9-91fc-4e21-b02c-99f185b82aff.png"></p>
+<p>VPC6:</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803572-540af5d9-88a4-4756-9b62-51d606d00bdc.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803572-540af5d9-88a4-4756-9b62-51d606d00bdc.png"></p>
+<p>VPC7:</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803722-ef43cf63-a677-49a6-8250-adfbc00accfa.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803722-ef43cf63-a677-49a6-8250-adfbc00accfa.png"></p>
+<p>配置交换机和路由器:</p>
+<p>Switch:</p>
+<p>en</p>
+<p>conf t</p>
+<p>vlan 30</p>
+<p>vlan 40</p>
+<p>int gi0&#x2F;0</p>
+<p>switchport access vlan 30</p>
+<p>no shutdown</p>
+<p>int gi0&#x2F;1</p>
+<p>switchport access vlan 40</p>
+<p>no shutdown</p>
+<p>int gi0&#x2F;2</p>
+<p>switchport trunk encapsulation dot1q</p>
+<p>switchport mode trunk</p>
+<p>switchport trunk allowed vlan 30,40</p>
+<p>no shutdown</p>
+<p>R1:</p>
+<p>en</p>
+<p>conf t</p>
+<p>int gi0&#x2F;1</p>
+<p>ip address 109.196.166.254 255.255.255.0</p>
+<p>no shutdown</p>
+<p>int gi0&#x2F;2</p>
+<p>ip address 185.6.12.254 255.255.255.0</p>
+<p>no shutdown</p>
+<p>int gi0&#x2F;3</p>
+<p>ip address 31.23.53.2 255.255.255.0</p>
+<p>no shutdown</p>
+<p>R2:</p>
+<p>en</p>
+<p>conf t</p>
+<p>int gi0&#x2F;0</p>
+<p>ip nat inside</p>
+<p>no shutdown</p>
+<p>int gi0&#x2F;0.1</p>
+<p>encapsulation dot1Q 30</p>
+<p>ip address 172.16.30.254 255.255.255.0</p>
+<p>ip nat inside</p>
+<p>no shutdown</p>
+<p>int gi0&#x2F;0.2</p>
+<p>encapsulation dot1Q 40</p>
+<p>ip address 172.16.40.254 255.255.255.0</p>
+<p>ip nat inside</p>
+<p>no shutdown</p>
+<p>int gi0&#x2F;1</p>
+<p>ip address 31.23.53.1 255.255.255.0</p>
+<p>ip nat outside</p>
+<p>no shutdown</p>
+<p>exit</p>
+<p>ip route 0.0.0.0 0.0.0.0 31.23.53.2</p>
+<p>acc 1 permit 172.16.0.0 0.0.255.255</p>
+<p>ip nat inside source list 1 int gi0&#x2F;1 overload</p>
+<p>ip nat inside source static tcp 172.16.30.1 80 31.23.53.3 80</p>
+<p>ip nat inside source static tcp 172.16.40.1 22 31.23.53.3 22</p>
+<p>ip nat inside source static tcp 172.16.40.1 3389 31.23.53.3 3389</p>
+<p>验证：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803872-db72f67f-b340-4f52-9c38-60d8392a61f8.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083803872-db72f67f-b340-4f52-9c38-60d8392a61f8.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083804100-1308d879-5ccf-4cf1-99cf-8e6a5418b7cc.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083804100-1308d879-5ccf-4cf1-99cf-8e6a5418b7cc.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083804237-66058270-c051-48e0-8ec1-c5796bc22c1e.png" alt="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734083804237-66058270-c051-48e0-8ec1-c5796bc22c1e.png"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://noobspace.cn">Stone</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://noobspace.cn/2025/01/20/eveNG/">https://noobspace.cn/2025/01/20/eveNG/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://noobspace.cn" target="_blank">Stone's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/20/CS2/" title="CS2画面和帧数优化/Demo录制【抖音需付费的教程(持续更新中)】"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">CS2画面和帧数优化/Demo录制【抖音需付费的教程(持续更新中)】</div></div></a></div><div class="next-post pull-right"><a href="/2025/01/20/Arma3UnlockDLC/" title="武装突袭3[Arma3]免费解锁全DLC方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">武装突袭3[Arma3]免费解锁全DLC方法</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Stone</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://kook.top/DmHCQZ"><i class="fab fa-kook"></i><span>加入我的KOOK频道</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://Message/?Uin=3010087667" target="_blank" title=""><i class="fab fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://github.com/3010087667" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:3010087667@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome!&nbsp友链,合作请联系我.<br>诚邀各路大佬在此刊登自己的文章.<br>欢迎加入我的QQ群：553446574</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A0%E6%A0%87%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">无标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%80%83%E6%A0%B8%E4%BB%BB%E5%8A%A1%E4%B8%80%EF%BC%9A%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E8%B6%85%E8%9E%8D%E5%90%88%E5%B9%B3%E5%8F%B0"><span class="toc-number">2.</span> <span class="toc-text">考核任务一：安装部署超融合平台</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%80%83%E6%A0%B8%E4%BB%BB%E5%8A%A1%E4%BA%8C%EF%BC%9ANat%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">考核任务二：Nat地址转换和常用服务配置</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E5%85%A8AI%E6%80%9D%E8%B7%AF/" title="游戏开发全AI思路">游戏开发全AI思路</a><time datetime="2025-02-12T08:02:27.206Z" title="发表于 2025-02-12 16:02:27">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/V87Pro%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="VGN客制化键盘V87Pro使用教程">VGN客制化键盘V87Pro使用教程</a><time datetime="2025-02-12T07:49:26.206Z" title="发表于 2025-02-12 15:49:26">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/Download/" title="【精品】资源下载页（所有文章下列出的资源都在这里下载）">【精品】资源下载页（所有文章下列出的资源都在这里下载）</a><time datetime="2025-02-12T03:46:29.836Z" title="发表于 2025-02-12 11:46:29">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" title="科学上网">科学上网</a><time datetime="2025-02-11T16:03:45.522Z" title="发表于 2025-02-12 00:03:45">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/11/VSCode%E5%AE%89%E8%A3%85Remote-SSH%E6%8F%92%E4%BB%B6%E5%B9%B6%E4%BD%BF%E7%94%A8/" title="VSCode安装Remote_SSH插件并使用">VSCode安装Remote_SSH插件并使用</a><time datetime="2025-02-10T16:22:24.207Z" title="发表于 2025-02-11 00:22:24">2025-02-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Stone</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">蜀ICP备2024077341号</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-git-main-zst0nes-projects.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-git-main-zst0nes-projects.vercel.app/',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.31/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div>flag{WELCOME_TO_THERE FXXQ}<script> document.getElementsByClassName("copyright")[0].innerHTML = "©2024 By Stone 萌ICP备20250074号"; </script> <div class="aplayer no-destroy" data-id="464916877" data-server="netease" data-type="song" data-fixed="true" data-autoplay=""> </div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="F,A,Q" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

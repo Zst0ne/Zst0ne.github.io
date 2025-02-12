@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>科学上网 | Stone's Blog</title><meta name="author" content="Stone"><meta name="copyright" content="Stone"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="演示系统：  （我将会以下面这2个系统作为代理的例子）Kali 2024 - Debian Linux ProxychainsCTF-OS  - Windows10【包含WSL】 Proxifier客户端（需要自己设置订阅&#x2F;代理节点）：2024可用订阅： 订阅：http:&#x2F;&#x2F;ss.chayigh.top&#x2F;api&#x2F;v1&#x2F;client&#x2F;subscribe?token&#x3D;60b045faf70b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科学上网">
+<meta property="og:url" content="https://noobspace.cn/2025/02/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.html">
+<meta property="og:site_name" content="Stone&#39;s Blog">
+<meta property="og:description" content="演示系统：  （我将会以下面这2个系统作为代理的例子）Kali 2024 - Debian Linux ProxychainsCTF-OS  - Windows10【包含WSL】 Proxifier客户端（需要自己设置订阅&#x2F;代理节点）：2024可用订阅： 订阅：http:&#x2F;&#x2F;ss.chayigh.top&#x2F;api&#x2F;v1&#x2F;client&#x2F;subscribe?token&#x3D;60b045faf70b">
+<meta property="og:locale">
+<meta property="og:image" content="https://noobspace.cn/img/head.jpg">
+<meta property="article:published_time" content="2025-02-11T16:03:45.522Z">
+<meta property="article:modified_time" content="2025-02-12T07:45:16.356Z">
+<meta property="article:author" content="Stone">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://noobspace.cn/img/head.jpg"><link rel="shortcut icon" href="/img/SkyLine.jpg"><link rel="canonical" href="https://noobspace.cn/2025/02/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '科学上网',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-02-12 15:45:16'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><script>if(document.location.href == "https://lagov.top") window.location.replace("about:blank"); </script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?2b421160be50ed43c7c0cc7da9895c04";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/CQ.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Stone's Blog"><span class="site-name">Stone's Blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">科学上网</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-11T16:03:45.522Z" title="发表于 2025-02-12 00:03:45">2025-02-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-12T07:45:16.356Z" title="更新于 2025-02-12 15:45:16">2025-02-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span id="" data-flag-title="科学上网"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="演示系统：-（我将会以下面这2个系统作为代理的例子）"><a href="#演示系统：-（我将会以下面这2个系统作为代理的例子）" class="headerlink" title="演示系统：  （我将会以下面这2个系统作为代理的例子）"></a>演示系统：  （我将会以下面这2个系统作为代理的例子）</h1><h2 id="Kali-2024-Debian-Linux-Proxychains"><a href="#Kali-2024-Debian-Linux-Proxychains" class="headerlink" title="Kali 2024 - Debian Linux Proxychains"></a>Kali 2024 - Debian Linux Proxychains</h2><h2 id="CTF-OS-Windows10【包含WSL】-Proxifier"><a href="#CTF-OS-Windows10【包含WSL】-Proxifier" class="headerlink" title="CTF-OS  - Windows10【包含WSL】 Proxifier"></a>CTF-OS  - Windows10【包含WSL】 <font style="color:rgb(31, 35, 40);">Proxifier</font></h2><h1 id="客户端（需要自己设置订阅-代理节点）："><a href="#客户端（需要自己设置订阅-代理节点）：" class="headerlink" title="客户端（需要自己设置订阅&#x2F;代理节点）："></a>客户端（需要自己设置订阅&#x2F;代理节点）：</h1><p>2024可用订阅：</p>
+<p><font style="color:rgb(73, 80, 87);background-color:rgb(240, 243, 248);">订阅：<a target="_blank" rel="noopener" href="http://ss.chayigh.top/api/v1/client/subscribe?token=60b045faf70b6e5fbf66c6b37eccaaec">http://ss.chayigh.top/api/v1/client/subscribe?token=60b045faf70b6e5fbf66c6b37eccaaec</a></font></p>
+<details class="lake-collapse"><summary id="uda2866fd"><span class="ne-text" style="font-size: 16px">v2链</span></summary><p id="u7ab12ae7" class="ne-p"><span class="ne-text" style="font-size: 16px">c3M6Ly9ZV1Z6TFRFeU9DMW5ZMjA2TmpZd01XWmlPVEJsT1dJekAxMjcuMC4wLjE6NDQzIzYlRTUlODUlODMlRTklQUIlOTglRTklODAlOUYlRTYlOUMlQkElRTUlOUMlQkElM0FjY3p6dXUudG9wCnZsZXNzOi8vZmQ4YmI4ZjItM2YwMS00YzQzLThjZjQtN2I0M2Y5MzA0MjE5QGhhamxhYi51Y2RhdmlzLmVkdTo4MD9zZWN1cml0eT1ub25lJnR5cGU9d3MmaGVhZGVyVHlwZT0mcGF0aD0maG9zdD13V3cuU3BFZUR0RXNULk5lVC5adUxhLmFJci5Ja0NvU2FMZVMuaVIuRDY2MjU5OS52MDEuVHpaTGlNaXRUTmVXLk5lVCMlRjAlOUYlODclQkElRjAlOUYlODclQjhfVVNfJUU3JUJFJThFJUU1JTlCJUJECnZsZXNzOi8vYjM1NjM3NmEtZTQwMy01Y2IxLThlNGYtYzk5YmVmOTdhNDY4QDE1MS4xMDEuNjYuMjE5OjgwP3R5cGU9d3MmaG9zdD1lTGktak9pTi1FTGl2MlJBeS5jT20uIyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOF9VU18lRTclQkUlOEUlRTUlOUIlQkQKc3M6Ly9ZMmhoWTJoaE1qQXRhV1YwWmkxd2IyeDVNVE13TlRvMVkzQTVXak5wVjI1S1dqST1AMjA1LjEzNC4xODAuMTUwOjQ0MyMlRjAlOUYlODclQkElRjAlOUYlODclQjhfVVNfJUU3JUJFJThFJUU1JTlCJUJECnNzOi8vWVdWekxUSTFOaTFqWm1JNllXMWhlbTl1YzJ0eU1EVT1ANTQuMjAyLjc1LjIwNjo0NDMjJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4X1VTXyVFNyVCRSU4RSVFNSU5QiVCRApzczovL1lXVnpMVEkxTmkxblkyMDZVbVY0YmtKblZUZEZWalZCUkhoSEAzOC4xMTQuMTE0LjE0Mzo3MDAyIyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOF9VU18lRTclQkUlOEUlRTUlOUIlQkQKdHJvamFuOi8vdGVsZWdyYW0taWQtcHJpdmF0ZXZwbnNANTQuMjI4Ljg3LjEyODoyMjIyMj9zZWN1cml0eT10bHMmc25pPXRyb2phbi5idXJnZXJpcC5jby51ayZ0eXBlPXRjcCZhbHBuPWh0dHAvMS4xIyVGMCU5RiU4NyVBRSVGMCU5RiU4NyVBQV9JRV8lRTclODglQjElRTUlQjAlOTQlRTUlODUlQjAtJTNFJUYwJTlGJTg3JUFBJUYwJTlGJTg3JUI4X0VTXyVFOCVBNSVCRiVFNyU4RiVBRCVFNyU4OSU5OQpzczovL1kyaGhZMmhoTWpBdGFXVjBaaTF3YjJ4NU1UTXdOVG94VWxkM1dHaDNaa0ZDTldkQlJXOTZWVFJITWxCblFEUTFMamczTGpFM05TNHhOalk2T0RBNE1BPT0jJUYwJTlGJTg3JUE5JUYwJTlGJTg3JUFBX0RFXyVFNSVCRSVCNyVFNSU5QiVCRApzczovL1kyaGhZMmhoTWpBdGFXVjBaaTF3YjJ4NU1UTXdOVHBvT0U5bk9IWTJlbXRZT1d4a1ZrWlpXV0ZxWWpCblFESXdPUzR6T0M0eE9EZ3VNVFl5T2pFd09EQT0jJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4X1VTXyVFNyVCRSU4RSVFNSU5QiVCRC0lM0UlRjAlOUYlODclQTklRjAlOUYlODclQUFfREVfJUU1JUJFJUI3JUU1JTlCJUJECnNzOi8vWVdWekxUSTFOaTFqWm1JNllXMWhlbTl1YzJ0eU1EVT1AMzUuODUuMzguMjE4OjQ0MyMlRjAlOUYlODclQkElRjAlOUYlODclQjhfVVNfJUU3JUJFJThFJUU1JTlCJUJECnZsZXNzOi8vYjY5YjE3YjktNDA3NC00MzE2LTlkODAtMTAzNDMzZDZiZmU0QDE4NS4xNDYuMTczLjU4OjgwODA/c2VjdXJpdHk9bm9uZSZ0eXBlPXdzJmhvc3Q9bGM3My5sZWJhc25vby5pci4mcGF0aD0lMkZzZXJ2ZXJuZXR0IyVGMCU5RiU4NyVCOCVGMCU5RiU4NyVBQV9TRV8lRTclOTElOUUlRTUlODUlQjgKc3M6Ly9ZMmhoWTJoaE1qQXRhV1YwWmkxd2IyeDVNVE13TlRveFVsZDNXR2gzWmtGQ05XZEJSVzk2VlRSSE1sQm5RRFExTGpnM0xqRTNOUzR4T0RFNk9EQTRNQT09IyVGMCU5RiU4NyVBOSVGMCU5RiU4NyVBQV9ERV8lRTUlQkUlQjclRTUlOUIlQkQKc3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURVPUAzNS44Ni4xMTcuMTI0OjQ0MyMlRjAlOUYlODclQkElRjAlOUYlODclQjhfVVNfJUU3JUJFJThFJUU1JTlCJUJELSUzRSVGMCU5RiU4NyVCOCVGMCU5RiU4NyVBQ19TR18lRTYlOTYlQjAlRTUlOEElQTAlRTUlOUQlQTEKdmxlc3M6Ly82M2Q0ZGM4MS0yOTdiLTRmZjYtYTVjMS0zODhlMTE5MWM0ZDBAMTkwLjkzLjI0Ny41Njo4MDgwP3R5cGU9d3MmaG9zdD1sZWdlbmRhcnlraW5nLmlyLnd3dy5zcGVlZHRlc3QubmV0Lnd3dy56dWxhLmlyLmNsb3VkZmxhcmUuY29tLm1vemRvemFyaS5iVXp6LiZwYXRoPS90ZWxlZ3JhbS1ATGVnZW5kZXJZX1NlcnZlcnMsdGVsZWdyYW0tQExlZ2VuZGVyWV9TZXJ2ZXJzLHRlbGVncmFtLUBMZWdlbmRlcllfU2VydmVycyx0ZWxlZ3JhbS1ATGVnZW5kZXJZX1NlcnZlcnMsdGVsZWdyYW0tQExlZ2VuZGVyWV9TZXJ2ZXJzLHRlbGVncmFtLUBMZWdlbmRlcllfU2VydmVycyx0ZWxlZ3JhbS1ATGVnZW5kZXJZX1NlcnZlcnMsdGVsZWdyYW0tQExlZ2VuZGVyWV9TZXJ2ZXJzLHRlbGVncmFtLUBMZWdlbmRlcllfU2VydmVycyx0ZWxlZ3JhbS1ATGVnZW5kZXJZX1NlcnZlcnMsdGVsZWdyYW0tQExlZ2VuZGVyWV9TZXJ2ZXJzLHRlbGVncmFtLUBMZWdlbmRlcllfU2VydmVycz9lZCUzRDI1NjAjJUYwJTlGJTg3JUE4JUYwJTlGJTg3JUI3X0NSXyVFNSU5MyVBNSVFNiU5NiVBRiVFOCVCRSVCRSVFOSVCQiU4RSVFNSU4QSVBMC0lM0UlRjAlOUYlODclQjMlRjAlOUYlODclQjFfTkxfJUU4JThEJUI3JUU1JTg1JUIwCnRyb2phbjovL1dPZVhTaGhKcExAMTA0LjIxLjM3LjM3OjQ0Mz9zZWN1cml0eT10bHMmc25pPTAxanp1cy56ZHpkemQueHl6JnR5cGU9d3MmaG9zdD0wMWp6dXMuemR6ZHpkLnh5eiZwYXRoPSUyRmp1emlnb25neWkjJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4X1VTXyVFNyVCRSU4RSVFNSU5QiVCRC0lM0UlRjAlOUYlODclQTglRjAlOUYlODclQjNfQ05fJUU0JUI4JUFEJUU1JTlCJUJECnZsZXNzOi8vYjM1NjM3NmEtZTQwMy01Y2IxLThlNGYtYzk5YmVmOTdhNDY4QDE1MS4xMDEuMi4yMTk6ODA/dHlwZT13cyZob3N0PWVMaS1qT2lOLUVMaXYyUkF5LmNPbS4jJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4X1VTXyVFNyVCRSU4RSVFNSU5QiVCRAp0cm9qYW46Ly9XT2VYU2hoSnBMQDEwNC4xNi43OS4xMjg6NDQzP3NlY3VyaXR5PXRscyZzbmk9MDFqenVzLnpkemR6ZC54eXomdHlwZT13cyZob3N0PTAxanp1cy56ZHpkemQueHl6JnBhdGg9JTJGanV6aWdvbmd5aSMlRjAlOUYlODclQkElRjAlOUYlODclQjhfVVNfJUU3JUJFJThFJUU1JTlCJUJELSUzRSVGMCU5RiU4NyVBOCVGMCU5RiU4NyVCM19DTl8lRTQlQjglQUQlRTUlOUIlQkQKc3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURVPUA1NC42OC4xNjAuMjQ6NDQzIyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOF9VU18lRTclQkUlOEUlRTUlOUIlQkQKc3M6Ly9ZMmhoWTJoaE1qQXRhV1YwWmkxd2IyeDVNVE13TlRwamRrbEpPRFZVY2xjMmJqQlBSM2xtY0VoV1V6RjFRRFExTGpnM0xqRTNOUzR4TnpFNk9EQTRNQT09IyVGMCU5RiU4NyVBOSVGMCU5RiU4NyVBQV9ERV8lRTUlQkUlQjclRTUlOUIlQkQKc3M6Ly9ZV1Z6TFRJMU5pMW5ZMjA2Y0V0RlZ6aEtVRUo1VkZaVVRIUk5RRE00TGpFeE5DNHhNVFF1TVRRek9qUTBNdz09IyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOF9VU18lRTclQkUlOEUlRTUlOUIlQkQKc3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURVPUA1NC4yMTMuMjI4LjYxOjQ0MyMlRjAlOUYlODclQkElRjAlOUYlODclQjhfVVNfJUU3JUJFJThFJUU1JTlCJUJECnNzOi8vWVdWekxURXlPQzFuWTIwNmMyaGhaRzkzYzI5amEzTT1AMTQ5LjIyLjk1LjE4Mzo0NDMjJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4X1VTXyVFNyVCRSU4RSVFNSU5QiVCRApzczovL1kyaGhZMmhoTWpBdGFXVjBaaTF3YjJ4NU1UTXdOVHBqZGtsSk9EVlVjbGMyYmpCUFIzbG1jRWhXVXpGMUA0NS44Ny4xNzUuMTg4OjgwODAjJUYwJTlGJTg3JUE5JUYwJTlGJTg3JUFBX0RFXyVFNSVCRSVCNyVFNSU5QiVCRC0lM0UlRjAlOUYlOEYlQjMlRUYlQjglOEZfdW5Lbm93XyVFNiU5QyVBQSVFNyU5RiVBNQpzczovL1lXVnpMVEkxTmkxblkyMDZabUZDUVc5RU5UUnJPRGRWU2tjM0AzOC4xMTQuMTE0LjE0MzoyMzc2IyVGMCU5RiU4NyVCQSVGMCU5RiU4NyVCOF9VU18lRTclQkUlOEUlRTUlOUIlQkQKc3M6Ly9ZV1Z6TFRFeU9DMW5ZMjA2YzJoaFpHOTNjMjlqYTNNPUAxNTYuMTQ2LjM4LjE2ODo0NDMjJUYwJTlGJTg3JUJBJUYwJTlGJTg3JUI4X1VTXyVFNyVCRSU4RSVFNSU5QiVCRApzczovL1kyaGhZMmhoTWpBdGFXVjBaaTF3YjJ4NU1UTXdOVG94VWxkM1dHaDNaa0ZDTldkQlJXOTZWVFJITWxCblFEUTFMamczTGpFM05TNHhPVEk2T0RBNE1BPT0jJUYwJTlGJTg3JUE5JUYwJTlGJTg3JUFBX0RFXyVFNSVCRSVCNyVFNSU5QiVCRA==</span></p></details>
+以下是修复后的Markdown内容，图片标签已替换为HTML格式，并修复了可能的BUG：
+
+<hr>
+<h2 id="V2ray"><a href="#V2ray" class="headerlink" title="V2ray"></a>V2ray</h2><p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2024/zip/45908058/1730128206991-7bb04a62-81b5-4344-bf7a-c427753b61e8.zip">v2rayN-Core.zip</a></p>
+<p><a target="_blank" rel="noopener" href="https://v2rayn.org/">2024最新v2rayN使用教程配置从入门到精通</a></p>
+<h2 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h2><p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2024/zip/45908058/1730128280514-66336cec-2455-4687-aeaa-91d75415a26b.zip">Clash.for.Windows.Setup.0.20.39_Opt-1.exe.zip</a></p>
+<p><a target="_blank" rel="noopener" href="https://clashfor.org/wiki/VMess.html">VMess | Clash for Windows</a></p>
+<h2 id="Proxychain"><a href="#Proxychain" class="headerlink" title="Proxychain"></a>Proxychain</h2><h2 id="VPN：EasyConnect"><a href="#VPN：EasyConnect" class="headerlink" title="VPN：EasyConnect"></a>VPN：EasyConnect</h2><p>Linux环境下使用：V2rayA</p>
+<p>Windows：三个随便换着用</p>
+<p>Android环境推荐：Clash Android</p>
+<p>备注：Github Clash作者已经被制裁了。苹果国区目前只能用盗版的。</p>
+<p>一些情况下Clash需要使用TUN模式以确保能正确的转发数据。</p>
+<h2 id="Tor-Browser-内置数据加密的代理浏览器。"><a href="#Tor-Browser-内置数据加密的代理浏览器。" class="headerlink" title="Tor-Browser 内置数据加密的代理浏览器。"></a>Tor-Browser 内置数据加密的代理浏览器。</h2><p>世界各地的志愿者为此提供跳板服务器，大陆用户需要提前使用TG订阅配置网桥来跨越GFW。</p>
+<p><a target="_blank" rel="noopener" href="https://www.torproject.org/dist/torbrowser/14.0.4/tor-browser-windows-x86_64-portable-14.0.4.exe">https://www.torproject.org/dist/torbrowser/14.0.4/tor-browser-windows-x86_64-portable-14.0.4.exe</a></p>
+<p>CoalStrike中内置了跳板，可以实现_proxychains_肉鸡转发，实现隐藏自身并执行攻击命令。</p>
+<h2 id="服务端："><a href="#服务端：" class="headerlink" title="服务端："></a>服务端：</h2><h2 id="X-UI-应该是最简单和方便的自己配置节点的面板了。"><a href="#X-UI-应该是最简单和方便的自己配置节点的面板了。" class="headerlink" title="X-UI 应该是最简单和方便的自己配置节点的面板了。"></a>X-UI 应该是最简单和方便的自己配置节点的面板了。</h2><p>我们可以直接使用PVE面板中的VNC登录</p>
+<p>如下图,先点击PVE信息，查看PVE登录信息，然后点击PVE控制面板，完成PVE登录(注意使用手机登陆PVE面板可能会报错,建议使用平板或者电脑登录)</p>
+<p>登录pve面板后点击qemu,然后再点击控制台,便会为我们连接VNC</p>
+<p>然后在VNC面板中输入你设置的ROOT用户密码（注意这里输密码时屏幕不会显示出来，输完后回车即可）</p>
+<h3 id="节点搭建"><a href="#节点搭建" class="headerlink" title="节点搭建"></a>节点搭建</h3><p>首先更新一下软件包和安装必要的软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update &amp;&amp; apt upgrade &amp;&amp; apt install curl wget -y</span><br></pre></td></tr></table></figure>
+
+<p>如果你本地有IPv6，你可以尝试安装X-UI面板，然后用IPv6地址访问web面板。如果你本地只有IPv4，又没有双栈服务器进行流量转发（因为nnr好像不允许转发HTTP流量，所以只能用自己的双栈服务器转发http流量），那你可能无法访问X-UI面板，那建议直接使用Xray-core</p>
+<h3 id="X-UI安装"><a href="#X-UI安装" class="headerlink" title="X-UI安装"></a>X-UI安装</h3><p>对于非朝鲜VPS可以使用一键脚本进行安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)</span><br></pre></td></tr></table></figure>
+
+<p>朝鲜的VPS可以使用下列命令手动安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://pan.ccckfg.top/d/Onedrive/%E8%B5%84%E6%BA%90/x-ui-linux-amd64.tar.gz</span><br><span class="line"><span class="built_in">cd</span> /root/</span><br><span class="line"><span class="built_in">rm</span> x-ui/ /usr/local/x-ui/ /usr/bin/x-ui -rf</span><br><span class="line">tar zxvf x-ui-linux-amd64.tar.gz</span><br><span class="line"><span class="built_in">chmod</span> +x x-ui/x-ui x-ui/bin/xray-linux-* x-ui/x-ui.sh</span><br><span class="line"><span class="built_in">cp</span> x-ui/x-ui.sh /usr/bin/x-ui</span><br><span class="line"><span class="built_in">cp</span> -f x-ui/x-ui.service /etc/systemd/system/</span><br><span class="line"><span class="built_in">mv</span> x-ui/ /usr/local/</span><br><span class="line">curl -o /usr/local/x-ui/bin/config.json -fSL https://pan.ccckfg.top/d/Onedrive/%E8%B5%84%E6%BA%90/config.json</span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl <span class="built_in">enable</span> x-ui</span><br><span class="line">systemctl restart x-ui</span><br></pre></td></tr></table></figure>
+
+<p>这个手动安装的X-UI会默认内置一个VMESS节点,将以下分享链接导入后，手动编辑一下服务器地址和端口为你自己的就可以使用了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmess://eyJhZGQiOiIxMjcuMC4wLjEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNWQwZTM4YmItYzYwMC00ZTM3LTg5YmYtY2M4ZmRmMmFmNGE0IiwibmV0Ijoid3MiLCJwYXRoIjoiL2tvciIsInBvcnQiOiI2NjY2IiwicHMiOiJLLk8uUnxrb3J1c2VyQHVjZXkuaWN1Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9</span><br></pre></td></tr></table></figure>
+
+<h3 id="Xray-core-命令行配置"><a href="#Xray-core-命令行配置" class="headerlink" title="Xray-core 命令行配置"></a>Xray-core 命令行配置</h3><p>如果你不想使用或者不能够使用X-UI,建议使用以下模板进行Xray-core安装</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/chika0801/Xray-examples">https://github.com/chika0801/Xray-examples</a></p>
+<h3 id="NNR转发设置"><a href="#NNR转发设置" class="headerlink" title="NNR转发设置"></a>NNR转发设置</h3><p>先查看一下nnr的节点监控，看一下有哪些转发服务器可用</p>
+<p>然后再添加转发规则（目标服务器和目标端口填你刚刚在VPS上设定的端口和VPS的IP），添加完后你应该会看到这样的对应关系</p>
+<p>其中的“源”就是转发服务器的端口和IP，就是说所有发送到源IP和端口的流量，都会原封不动的转发给目标。</p>
+<p>我们添加好转发规则后，可以在代理软件中，将服务器的IP和端口替换为“源”就行了</p>
+<h3 id="如果你需要在公网上反弹Shell，frp或者gost是必不可少的："><a href="#如果你需要在公网上反弹Shell，frp或者gost是必不可少的：" class="headerlink" title="如果你需要在公网上反弹Shell，frp或者gost是必不可少的："></a>如果你需要在公网上反弹Shell，frp或者gost是必不可少的：</h3><h3 id="nc"><a href="#nc" class="headerlink" title="nc"></a>nc</h3><h3 id="一、nc简介"><a href="#一、nc简介" class="headerlink" title="一、nc简介"></a>一、nc简介</h3><p>nc 被称为瑞士军刀netcat ，所做的就是在两台电脑之间建立链接，并返回两个数据流。</p>
+<p>可运行在TCP或者UDP模式，添加参数 —u 则调整为UDP，默认为TCP</p>
+<p>即可用在windows系统也可在linux系统，也可作用于二者之间，只是对应的命令有微微差异。</p>
+<h3 id="二、nc常用参数"><a href="#二、nc常用参数" class="headerlink" title="二、nc常用参数"></a>二、nc常用参数</h3><ul>
+<li><strong>-l    开启监听</strong></li>
+<li><strong>-p   指定一个端口</strong></li>
+<li><strong>-v   显示详细输出</strong></li>
+<li><strong>-e   指定对应的应用程序</strong></li>
+<li><strong>-n   nc不要DNS反向查询IP的域名</strong></li>
+<li><strong>-z   连接成功后立即关闭连接</strong></li>
+</ul>
+<h3 id="三、建立C-S连接"><a href="#三、建立C-S连接" class="headerlink" title="三、建立C-S连接"></a>三、建立C-S连接</h3><h4 id="3-1-环境："><a href="#3-1-环境：" class="headerlink" title="3.1 环境："></a>3.1 环境：</h4><p>目的在于实现client输入的内容同样显示在server的终端上</p>
+<p>client：CentOS7  192.168.124.128 </p>
+<p>server：kali   192.168.124.133</p>
+<h4 id="3-2-步骤："><a href="#3-2-步骤：" class="headerlink" title="3.2 步骤："></a>3.2 步骤：</h4><p>在server端kali虚拟机上开启监听1234端口：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvp 1234</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734492598618-cf03a81b-13ee-41d0-948d-f5fc8a8cef70.png" alt="server端监听" />
+
+<p>在client端虚拟机上执行如下命令后并随便键入内容（如下图所示）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -v 192.168.124.133 1234</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734492598556-b345546b-c5b1-4a08-a79a-74395d8f64b6.png" alt="client端连接" />
+
+<p>server端收到相同内容：</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734492598574-9ff11533-0e01-454c-b06b-832af8b018de.png" alt="server端接收" />
+
+<h3 id="四、正向反弹shell"><a href="#四、正向反弹shell" class="headerlink" title="四、正向反弹shell"></a>四、正向反弹shell</h3><h4 id="4-1-环境："><a href="#4-1-环境：" class="headerlink" title="4.1 环境："></a>4.1 环境：</h4><p>目的在于实现kali的shell反弹到CentOS7的终端上，并可在CentOS7上执行命令操作kali</p>
+<p>kali监听端口、选择对应的程序，CentOS7连接kali </p>
+<p>CentOS7  192.168.124.128 </p>
+<p>kali   192.168.124.133</p>
+<h4 id="4-2-步骤："><a href="#4-2-步骤：" class="headerlink" title="4.2 步骤："></a>4.2 步骤：</h4><p>在kali上执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvvp 2222 -e /bin/bash</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734492598613-d3c262ea-74c7-4769-83c2-73fe7053127d.png" alt="kali监听" />
+
+<p>在CentOS7上执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 192.168.124.133 2222</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734492598759-a4847ad2-9681-4a2c-ae7e-e04db983570b.png" alt="CentOS7连接" />
+
+<p>如上图所示即为连接成功，下面尝试执行命令</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734492598999-5e0ba5aa-ae4b-4c39-9d61-7dba1a7599b7.png" alt="执行命令" />
+
+<img src="https://cdn.nlark.com/yuque/0/2024/png/45908058/1734492599113-45439890-39ba-475a-bdc6-1da357247cdb.png" alt="命令结果" />
+
+<hr>
+<p>以上内容已修复图片标签为HTML格式，并确保内容完整无误。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://noobspace.cn">Stone</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://noobspace.cn/2025/02/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">https://noobspace.cn/2025/02/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://noobspace.cn" target="_blank">Stone's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/02/12/Download/" title="【精品】资源下载页（所有文章下列出的资源都在这里下载）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【精品】资源下载页（所有文章下列出的资源都在这里下载）</div></div></a></div><div class="next-post pull-right"><a href="/2025/02/11/VSCode%E5%AE%89%E8%A3%85Remote-SSH%E6%8F%92%E4%BB%B6%E5%B9%B6%E4%BD%BF%E7%94%A8/" title="VSCode安装Remote_SSH插件并使用"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">VSCode安装Remote_SSH插件并使用</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Stone</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://kook.top/DmHCQZ"><i class="fab fa-kook"></i><span>加入我的KOOK频道</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://Message/?Uin=3010087667" target="_blank" title=""><i class="fab fa-qq" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://github.com/3010087667" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:3010087667@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome!&nbsp友链,合作请联系我.<br>诚邀各路大佬在此刊登自己的文章.<br>欢迎加入我的QQ群：553446574</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BC%94%E7%A4%BA%E7%B3%BB%E7%BB%9F%EF%BC%9A-%EF%BC%88%E6%88%91%E5%B0%86%E4%BC%9A%E4%BB%A5%E4%B8%8B%E9%9D%A2%E8%BF%992%E4%B8%AA%E7%B3%BB%E7%BB%9F%E4%BD%9C%E4%B8%BA%E4%BB%A3%E7%90%86%E7%9A%84%E4%BE%8B%E5%AD%90%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">演示系统：  （我将会以下面这2个系统作为代理的例子）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kali-2024-Debian-Linux-Proxychains"><span class="toc-number">1.1.</span> <span class="toc-text">Kali 2024 - Debian Linux Proxychains</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CTF-OS-Windows10%E3%80%90%E5%8C%85%E5%90%ABWSL%E3%80%91-Proxifier"><span class="toc-number">1.2.</span> <span class="toc-text">CTF-OS  - Windows10【包含WSL】 Proxifier</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%88%E9%9C%80%E8%A6%81%E8%87%AA%E5%B7%B1%E8%AE%BE%E7%BD%AE%E8%AE%A2%E9%98%85-%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9%EF%BC%89%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">客户端（需要自己设置订阅&#x2F;代理节点）：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#V2ray"><span class="toc-number">2.1.</span> <span class="toc-text">V2ray</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Clash"><span class="toc-number">2.2.</span> <span class="toc-text">Clash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proxychain"><span class="toc-number">2.3.</span> <span class="toc-text">Proxychain</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VPN%EF%BC%9AEasyConnect"><span class="toc-number">2.4.</span> <span class="toc-text">VPN：EasyConnect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tor-Browser-%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86%E7%9A%84%E4%BB%A3%E7%90%86%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%82"><span class="toc-number">2.5.</span> <span class="toc-text">Tor-Browser 内置数据加密的代理浏览器。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%EF%BC%9A"><span class="toc-number">2.6.</span> <span class="toc-text">服务端：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#X-UI-%E5%BA%94%E8%AF%A5%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E5%92%8C%E6%96%B9%E4%BE%BF%E7%9A%84%E8%87%AA%E5%B7%B1%E9%85%8D%E7%BD%AE%E8%8A%82%E7%82%B9%E7%9A%84%E9%9D%A2%E6%9D%BF%E4%BA%86%E3%80%82"><span class="toc-number">2.7.</span> <span class="toc-text">X-UI 应该是最简单和方便的自己配置节点的面板了。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA"><span class="toc-number">2.7.1.</span> <span class="toc-text">节点搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#X-UI%E5%AE%89%E8%A3%85"><span class="toc-number">2.7.2.</span> <span class="toc-text">X-UI安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Xray-core-%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="toc-number">2.7.3.</span> <span class="toc-text">Xray-core 命令行配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NNR%E8%BD%AC%E5%8F%91%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.7.4.</span> <span class="toc-text">NNR转发设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E9%9C%80%E8%A6%81%E5%9C%A8%E5%85%AC%E7%BD%91%E4%B8%8A%E5%8F%8D%E5%BC%B9Shell%EF%BC%8Cfrp%E6%88%96%E8%80%85gost%E6%98%AF%E5%BF%85%E4%B8%8D%E5%8F%AF%E5%B0%91%E7%9A%84%EF%BC%9A"><span class="toc-number">2.7.5.</span> <span class="toc-text">如果你需要在公网上反弹Shell，frp或者gost是必不可少的：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nc"><span class="toc-number">2.7.6.</span> <span class="toc-text">nc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81nc%E7%AE%80%E4%BB%8B"><span class="toc-number">2.7.7.</span> <span class="toc-text">一、nc简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81nc%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-number">2.7.8.</span> <span class="toc-text">二、nc常用参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BB%BA%E7%AB%8BC-S%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.7.9.</span> <span class="toc-text">三、建立C-S连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-number">2.7.9.1.</span> <span class="toc-text">3.1 环境：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-number">2.7.9.2.</span> <span class="toc-text">3.2 步骤：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%AD%A3%E5%90%91%E5%8F%8D%E5%BC%B9shell"><span class="toc-number">2.7.10.</span> <span class="toc-text">四、正向反弹shell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-number">2.7.10.1.</span> <span class="toc-text">4.1 环境：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-number">2.7.10.2.</span> <span class="toc-text">4.2 步骤：</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E5%85%A8AI%E6%80%9D%E8%B7%AF/" title="游戏开发全AI思路">游戏开发全AI思路</a><time datetime="2025-02-12T08:02:27.206Z" title="发表于 2025-02-12 16:02:27">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/V87Pro%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="VGN客制化键盘V87Pro使用教程">VGN客制化键盘V87Pro使用教程</a><time datetime="2025-02-12T07:49:26.206Z" title="发表于 2025-02-12 15:49:26">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/Download/" title="【精品】资源下载页（所有文章下列出的资源都在这里下载）">【精品】资源下载页（所有文章下列出的资源都在这里下载）</a><time datetime="2025-02-12T03:46:29.836Z" title="发表于 2025-02-12 11:46:29">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" title="科学上网">科学上网</a><time datetime="2025-02-11T16:03:45.522Z" title="发表于 2025-02-12 00:03:45">2025-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/11/VSCode%E5%AE%89%E8%A3%85Remote-SSH%E6%8F%92%E4%BB%B6%E5%B9%B6%E4%BD%BF%E7%94%A8/" title="VSCode安装Remote_SSH插件并使用">VSCode安装Remote_SSH插件并使用</a><time datetime="2025-02-10T16:22:24.207Z" title="发表于 2025-02-11 00:22:24">2025-02-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Stone</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">蜀ICP备2024077341号</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-git-main-zst0nes-projects.vercel.app/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-git-main-zst0nes-projects.vercel.app/',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.31/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div>flag{WELCOME_TO_THERE FXXQ}<script> document.getElementsByClassName("copyright")[0].innerHTML = "©2024 By Stone 萌ICP备20250074号"; </script> <div class="aplayer no-destroy" data-id="464916877" data-server="netease" data-type="song" data-fixed="true" data-autoplay=""> </div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="F,A,Q" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
